@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <title>Contact Form</title>
+        <style>
+            body{
+                background-color: yellow;
+                font-family: monospace;
+            }
+
+            input{
+                background-color: purple;
+                color: white;
+                
+            }
+
+            select {
+                background-color: purple;
+                color: white;
+            }
+
+            .contactUs{
+                background-color: white;
+                margin-top: 50px;
+                margin-bottom: 50px;
+                margin-left: 150px;
+                margin-right: 150px;
+                font-size: 30px;
+            }
+
+            #inquiryDate {
+                color: white;
+            }
+            #submitButton {
+                margin-top: 100px;
+                margin-left: 50%;
+                background-color: blue;
+            }
+            #submitButton:hover {
+                background-color: red;
+            }
+
+            label{
+                font-size: 20px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Contact Me!</h1>
+        <form name="contactForm" method="get" action ="INST377-Week2_lecture_FormSuccess.html">
+        <div class="contactUs">
+            <!--User Name Details-->
+            <label for="firstName">First Name: </label>
+            <input type="text" id="firstName" required> 
+            <br>
+            <label for="lastName">Last Name: </label>
+            <input type="text" id="lastName" required>
+            <br>
+            <hr> 
+        </div>
+            <!-- Inquiry Date -->
+            <label for="inquiryDate">Inquiry Date:</label>
+            <input type="datetime-local" id="inquiryDate" required>
+            <br>
+            <!-- Inquiry Reason -->
+            <label for="reason">Inquiry Type:</label> <br>
+            <input type="radio" name="reason"> Media Inquiries <br>
+            <input type="radio" name="reason"> General Inquiries <br>
+            <input type="radio" name="reason"> Corporate Inquiries <br>
+            <br>
+            <hr> 
+            <!-- Address -->
+            <h3>Address</h3>
+            <label for="street">Street:</label>
+            <input type="text" id="street"><br>
+            <label for="city">City:</label>
+            <input type="text" id="city"><br>
+            <label for="state">State:</label>
+            <input type="text" id="state" maxlength="2"><br>
+            <label for="zipcode">Zipcode:</label>
+            <input type="text" id="zipcode" maxlength="5"><br>
+            <br>
+            <hr> 
+            <!-- University Affiliation -->
+            <label for="university">What University are you affiliated with: </label>
+            <select id="university" name="University">
+                <option hidden disabled selected>-- Select Option --</option>
+                <option value="umd">UMD</option>
+                <option value="umbc">UMBC</option>
+                <option value="other">Other</option>
+            </select>
+            <br>
+            <!-- Lebron or Jordan -->
+            <label for ="lebron or jordan"> Who is your G.O.A.T?: </label>
+            <select id="lebron or jordan" name="Lebron or Jordan">
+                <option hidden disabled selected>-- Select Option --</option>
+                <option value="lebron">Lebron James</option>
+                <option value="jordan">Michael Jordan</option>
+            </select>
+            <br>
+            <!-- Email -->
+            <label for="email">What is the best email to reach you at? </label>
+            <input type="email" id="email" placeholder="test@gmail.com" required>
+            <br>
+            <hr>
+            <input type="submit" value="Send It!" id="submitButton">
+        </form>
+    </body>
+</html>
